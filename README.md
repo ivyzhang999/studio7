@@ -16,4 +16,8 @@ Particle.variables() takes 2 paramters. The first is a string which is used to c
 
 ***Q3. "When accessing variables through Particle Dev or the on-line Console, polling is triggered by a person".  Explain what that previous sentence refers to (how does the person trigger the polling):***
 
+The person makes some kind of API request that tries to ascertain the value of a variable
+
 ***Q4. Many particle functions, like `Particle.function()` and `Particle.variable()`, require both a string and another parameter.  Explain how each relates to what is externally visible (accessible from the internet) vs. what is relevant internal to the sketch.  Make changes to verify your understanding as necessary***.
+
+The first variable is externally visible in the sense that it is a string that will be in the query URL to access the function or variable. The second parameter is the actual variable / function in the code that will be accessed or triggered by the HTTP request.
