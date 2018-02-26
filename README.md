@@ -12,6 +12,8 @@
 
 ***Q2. In your own words, explain the parameters/arguments given to `Particle.variable()`***
 
+Particle.variables() takes 2 paramters. The first is a string which is used to construct the URL which we will subsequently make GET requests in order to determine the value of the variable. The second parameter is the actual variable (in code) whose value will be reported upon the HTTP request.
+
 ***Q3. "When accessing variables through Particle Dev or the on-line Console, polling is triggered by a person".  Explain what that previous sentence refers to (how does the person trigger the polling):***
 
 ***Q4. Many particle functions, like `Particle.function()` and `Particle.variable()`, require both a string and another parameter.  Explain how each relates to what is externally visible (accessible from the internet) vs. what is relevant internal to the sketch.  Make changes to verify your understanding as necessary***.
