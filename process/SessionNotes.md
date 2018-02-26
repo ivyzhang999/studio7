@@ -9,3 +9,5 @@
 
 
 ## Outstanding Issues or Questions
+
+* Some issues with the repository in the beginning
