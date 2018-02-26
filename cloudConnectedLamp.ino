@@ -4,13 +4,18 @@ int lastDebounceTime;
 bool lightOn;
 int color[] = {255, 255, 255};
 int buttonState;
+int bluePin = D0;
+int greenPin = D2;
+int redPin = D3;
 
 STARTUP(WiFi.selectAntenna(ANT_AUTO));
 
 void setup(){
   Serial.begin(9600);
-  pinMode(D0, OUTPUT);
+  pinMode(bluePin, OUTPUT);
   pinMode(D1, INPUT_PULLUP);
+  pinMode(greenPin, OUTPUT);
+  pinMode(redPin, OUTPUT);
 
 
   lightOn = false;
@@ -45,10 +50,14 @@ void loop(){
 
 int setLampPower(String status) {
   if (status == "TRUE") {
-    digitalWrite(D0, TRUE);
+    digitalWrite(bluePin, TRUE);
+    digitalWrite(greenPin, TRUE);
+    digitalWrite(redPin, TRUE);
   }
   else if (status == "FALSE") {
-    digitalWrite(D1, FALSE);
+    digitalWrite(bluePin, FALSE);
+    digitalWrite(greenPin, FALSE);
+    digitalWrite(redPin, FALSE);
   }
   else {
     //do nothing
